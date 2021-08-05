@@ -41,10 +41,10 @@ namespace BingWallpaperTest
             Regex regex = new Regex("<Url>(?<MyUrl>.*?)</Url>", RegexOptions.IgnoreCase);
             MatchCollection collection = regex.Matches(xmlDoc);
             // 取得匹配项列表
-            string ImageUrl = "http://www.bing.com" + collection[0].Groups["MyUrl"].Value;
+            string ImageUrl = "http://cn.bing.com" + collection[0].Groups["MyUrl"].Value;
             if (true)
             {
-                ImageUrl = ImageUrl.Replace("1366x768", "1920x1080");
+                ImageUrl = ImageUrl.Replace("1920x1080", "UHD");
             }
             return ImageUrl;
         }
